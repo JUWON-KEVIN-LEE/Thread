@@ -50,7 +50,10 @@ ThreadLocal
 
 Handler
 --------------
-![사진3](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/handler.png)
+![pic](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/handler.png)
+
+### runOnUiThread
+![사진4](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/run_on_ui_thread.png)
 
 Looper
 --------------
@@ -58,7 +61,7 @@ Looper
 따라서 기본 스레드에서 메시지를 전달받으려면 prepare() 메서드를 통해 Looper를 생성하고, loop() 메서드를 통해 <br>
 Looper가 무한히 루프를 돌며 Message Queue에 쌓인 Message나 Runnable 객체를 꺼내 Handler에 전달하도록 해야 한다.
 
-![사진4](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/looper.png)
+![사진5](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/looper.png)
 #### Looper.prepare() 는 현재 Thread 의 ThreadLocal 에서 Map[key : ThreadLocal, value : Looper] 
 #### 형태로 새로 생성해서 저장해놓거나 이미 있다면 꺼내서 사용할 수 있도록 되어 있다.
 
