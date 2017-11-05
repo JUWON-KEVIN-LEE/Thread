@@ -55,11 +55,12 @@ Handler
 Looper
 --------------
 메인 스레드는 Looper가 기본적으로 생성돼 있지만, 새로 생성한 스레드는 기본적으로 Looper를 가지고 있지 않다.
-따라서 기본 스레드에서 메시지를 전달받으려면 prepare() 메서드를 통해 Looper를 생성하고, loop() 메서드를 통해 Looper가 무한히 루프를 돌며 Message Queue에 쌓인 Message나 Runnable 객체를 꺼내 Handler에 전달하도록 해야 한다.
+따라서 기본 스레드에서 메시지를 전달받으려면 prepare() 메서드를 통해 Looper를 생성하고, loop() 메서드를 통해
+Looper가 무한히 루프를 돌며 Message Queue에 쌓인 Message나 Runnable 객체를 꺼내 Handler에 전달하도록 해야 한다.
 
 ![사진4](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/looper.png)
-### Looper.prepare() 는 현재 Thread 의 ThreadLocal 에서 Map[key : ThreadLocal, value : Looper] 
-### 형태로 새로 생성해서 저장해놓거나 이미 있다면 꺼내서 사용할 수 있도록 되어 있다.
+#### Looper.prepare() 는 현재 Thread 의 ThreadLocal 에서 Map[key : ThreadLocal, value : Looper] 
+#### 형태로 새로 생성해서 저장해놓거나 이미 있다면 꺼내서 사용할 수 있도록 되어 있다.
 
 이렇게 활성화된 Looper는 quit()이나 quitSafely() 메서드로 중단할 수 있다.
 quit() 메서드가 호출되면 Looper는 즉시 종료되고, quitSafely() 메서드가 호출되면 현재 Message Queue에 쌓인 메시지들을 처리한 후 종료된다.
