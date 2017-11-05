@@ -52,7 +52,7 @@ Handler
 --------------
 ![pic](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/handler.png)
 
-### runOnUiThread
+#### runOnUiThread
 ![사진4](https://github.com/JUWON-KEVIN-LEE/Thread/blob/master/img/run_on_ui_thread.png)
 
 Looper
